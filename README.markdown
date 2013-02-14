@@ -1,3 +1,39 @@
+TWIG helpers
+======================
+
+TWIG helpers have been implemented in the project to provide easy access to user permissions restrictions.
+
+Helpers list :
+
+- secure.anchor
+- is_accessible
+
+secure.anchor
+-------------
+
+This is an URL generation helper that shows a link if the user has access to a route, shows nothing otherwise.
+
+It is used in twig templates with the following code:
+
+    {{ secure.anchor(link_text, _route, _route_values, _link_attributes) }}
+
+- link_text (string): the content of the <a> tag and the actual content to be transformed into a link. Can be html code.
+- _route (string): the project's route to be used when generating the url.
+- _route_values (array): a list of the project's route parameters to be used when generating the url.
+- _link_attributes (array): a list of attributes to be set when creating the <a> tag. ie: class, style, etc.
+
+is_accessible
+-------------
+
+This is a twig function that returns true if a url path is accessible to the connected user, false otherwise.
+
+It is used in twig templates with the following code:
+
+    {{ is_accessible( _route, _route_values ) }}
+
+- _route (string): the project's route to be used when generating the url.
+- _route_values (array): a list of the project's route parameters to be used when generating the url.
+
 Connexion Restrictions Service
 ==============================
 
