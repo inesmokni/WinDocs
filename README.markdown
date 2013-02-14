@@ -21,6 +21,8 @@ Get Perimeter for connected user
 
 This can be achieved by calling the `getPerimeter()` function which takes no arguments.
 
+    $perimeter = $service->getPerimeter();
+
 This function returns :
 
 - if Perimeter is defined, an array with two keys :
@@ -32,6 +34,8 @@ Get Subdomain for connected user
 --------------------------------
 This can be achieved by calling the `getSubdomain()` function which takes no arguments.
 
+    $perimeter = $service->getSubdomain();
+
 This function returns :
 
 - the subdomain id which is also the client's reference, if a subdomain is defined
@@ -40,5 +44,7 @@ This function returns :
 Get Delegation for connected user
 ---------------------------------
 This can be achieved by calling the `getDelegation()` function which takes no arguments.
+
+    $perimeter = $service->getDelegation();
 
 This function returns true if the user is connected with a delegated account, false otherwise
