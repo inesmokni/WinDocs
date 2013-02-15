@@ -50,7 +50,7 @@ It is used in twig templates with the following code:
 
 Example:
 
-    {{ secure.preset_link('Ajouter nouveau vendeur', 'seller_user', 'new', {'client':1, 'shop':1}) }}
+    {{ secure.preset_link('Add a new seller', 'seller_user', 'new', {'client':1, 'shop':1}) }}
 
 
 Connexion Restrictions Service
