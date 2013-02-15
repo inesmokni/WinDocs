@@ -34,6 +34,25 @@ It is used in twig templates with the following code:
 - _route (string): the project's route to be used when generating the url.
 - _route_values (array): a list of the project's route parameters to be used when generating the url.
 
+preset_link
+-----------
+
+This is an URL generation helper that shows a link if the user has permission to a certain form and needs to restrict some fields values, shows nothing otherwise.
+
+It is used in twig templates with the following code:
+
+    {{ secure.preset_link(link_text, entity, pathway, fields) }}
+
+- link_text (string): the content of the `<a>` tag and the actual content to be transformed into a link. Can be html code.
+- entity (string): the entity's short code.
+- pathway (string): can be 'new' or 'edit' according to the desired target form.
+- fields (array): a list of fields to be set as a restriction.
+
+Example:
+
+    {{ secure.preset_link('Ajouter nouveau vendeur', 'seller_user', 'new', {'client':1, 'shop':1}) }}
+
+
 Connexion Restrictions Service
 ==============================
 
