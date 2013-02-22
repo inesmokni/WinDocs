@@ -1,3 +1,4 @@
 Demandes de composants :
 ========================
-this is an edit test
+
+Ajout table: component_translation : contient les translations des composants.
